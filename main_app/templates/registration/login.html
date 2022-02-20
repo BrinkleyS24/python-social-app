@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Log In</h1>
+<form method="post" action="{% url 'login' %}">
+    <div class="form-group">
+        {% csrf_token %}
+
+        <div class="mb-3 form-group">
+            <input type="tet" class="form-control" name="username" placeholder="Username">
+        </div>
+        <div class="mb-3 form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <div id="emailHelp" class="form-text">Not A User? Register <a href="{% url 'signup' %}">Here</a></div>
+        <br />
+    </div>
+    <input class="btn btn-primary" type="submit" value="Log In">
+    <input type="hidden" name="next" value="{{ next }}" />
+</form>
+{% endblock %}
