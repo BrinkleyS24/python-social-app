@@ -13,7 +13,6 @@ urlpatterns = [
     path('profile/<int:pk>/', Profile.as_view(), name='profile'),
     path('profile/<int:pk>/edit', ProfileEdit.as_view(), name='profile-edit'),
 
-    path('profile/<int:user_id>/add_photo/', views.add_photo, name='add_photo'),
 
 
     path('accounts/signup/', views.signup, name='signup'),
