@@ -1,4 +1,5 @@
 # python-social-app
+Small social app that allows you to create post and converse with other users.
 
 ## Technologies Used
 
