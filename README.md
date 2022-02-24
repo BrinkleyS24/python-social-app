@@ -17,3 +17,5 @@
 ## Future Enhancements
 - Update User Profile
 - User to add photos to account
+- like/dislike feature under user post
+- Messages other users
