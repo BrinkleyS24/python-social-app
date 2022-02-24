@@ -10,7 +10,7 @@
     </div>
     <div class="row justify-content-center mt-3">
         <div class="col-md-5 col-sm-12 border-bottom">
-            <p><strong>{{ post.author }}</strong> {{ post.created_on }}</p>
+            <p><strong><a href="{% url 'profile' user.profile.pk %}" style="text-decoration: none;">{{ post.author }}</a></strong> {{ post.created_on }}</p>
             <p>{{ post.body }}</p>
             <a href="{% url 'post-edit' post.pk %}"><i class="fa-solid fa-pen-to-square"></i></a>
             <a href="{% url 'post-delete' post.pk %}" style="color: red;"><i class="fa-solid fa-trash-can"></i></i></a>
@@ -37,7 +37,7 @@
     <div class="row justify-content-center mt-3 mb-5 border-bottom">
         <div class="col-md-5 col-sm-12">
             <p>
-                <strong>{{ comment.author }}</strong> {{ comment.created_on }}
+                <strong><a href="{% url 'profile' user.profile.pk %}" style="text-decoration: none;">{{ comment.author }}</a></strong> {{ comment.created_on }}
             </p>
             <p>{{ comment.comment }}</p>
             {% if request.user == comment.author %}
